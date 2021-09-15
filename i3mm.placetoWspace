@@ -1,0 +1,11 @@
+#! /bin/bash
+. "$XDG_RUNTIME_DIR"/i3mm/data
+
+if [ "$#" -lt "1" ]; then
+    i3mm.gotoWspace 1
+    exit;
+fi
+
+displayIndex="$(i3mm.getDisplayIndex)"
+
+i3-msg -t run_command move workspace "\"$1:$displayIndex-$1\""

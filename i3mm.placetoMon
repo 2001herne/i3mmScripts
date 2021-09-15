@@ -1,0 +1,19 @@
+#! /bin/bash
+. "$XDG_RUNTIME_DIR"/i3mm/data
+
+if [ "$#" -lt "1" ]; then
+    i3mm.gotoMon 1
+    exit;
+fi
+
+oldDisplay="$(i3mm.getDisplayIndex)"
+echo "$oldDisplay"
+
+i3mm.gotoMon "$1"
+
+currentDisplay="$(i3mm.getDisplayIndex)"
+currentWspace="$(i3mm.getWspaceIndex)"
+
+i3mm.gotoMon "$oldDisplay"
+
+i3-msg -t run_command move container to workspace "$currentWspace:$currentDisplay-$currentWspace"

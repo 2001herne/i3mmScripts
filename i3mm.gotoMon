@@ -1,0 +1,11 @@
+#! /bin/bash
+. "$XDG_RUNTIME_DIR"/i3mm/data
+
+if [ "$#" -lt "1" ]; then
+    i3mm.gotoMon 1
+    exit;
+fi
+
+display=${displays[$(($1 - 1))]}
+
+i3-msg -t run_command focus output "$display"

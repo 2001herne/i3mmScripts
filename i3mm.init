@@ -1,0 +1,12 @@
+#! /bin/bash
+mkdir -p "$XDG_RUNTIME_DIR"/i3mm
+
+displays=($(xrandr --current | grep " connected" | cut -f 1 -d " "))
+
+echo "displays=(" "${displays[@]}" ")" > "$XDG_RUNTIME_DIR"/i3mm/data
+
+for (( i=1; i <= ${#displays[@]}; i++)); do
+    i3mm.gotoLoc "$i" 1;
+done
+
+i3mm.gotoLoc 1 1

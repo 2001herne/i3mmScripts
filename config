@@ -1,0 +1,52 @@
+# Section of an i3wm config for this set of shell scripts
+
+set $super Mod4
+set $alt Mod1
+
+exec_always i3mm.init
+
+bindsym $mod+1 exec i3mm.gotoWspace 1
+bindsym $mod+2 exec i3mm.gotoWspace 2
+bindsym $mod+3 exec i3mm.gotoWspace 3
+bindsym $mod+4 exec i3mm.gotoWspace 4
+bindsym $mod+5 exec i3mm.gotoWspace 5
+bindsym $mod+6 exec i3mm.gotoWspace 6
+bindsym $mod+7 exec i3mm.gotoWspace 7
+bindsym $mod+8 exec i3mm.gotoWspace 8
+bindsym $mod+9 exec i3mm.gotoWspace 9
+
+bindsym $mod+Shift+1 exec i3mm.movetoWspace 1
+bindsym $mod+Shift+2 exec i3mm.movetoWspace 2
+bindsym $mod+Shift+3 exec i3mm.movetoWspace 3
+bindsym $mod+Shift+4 exec i3mm.movetoWspace 4
+bindsym $mod+Shift+5 exec i3mm.movetoWspace 5
+bindsym $mod+Shift+6 exec i3mm.movetoWspace 6
+bindsym $mod+Shift+7 exec i3mm.movetoWspace 7
+bindsym $mod+Shift+8 exec i3mm.movetoWspace 8
+bindsym $mod+Shift+9 exec i3mm.movetoWspace 9
+
+bindsym $mod+Ctrl+1 exec i3mm.placetoWspace 1
+bindsym $mod+Ctrl+2 exec i3mm.placetoWspace 2
+bindsym $mod+Ctrl+3 exec i3mm.placetoWspace 3
+bindsym $mod+Ctrl+4 exec i3mm.placetoWspace 4
+bindsym $mod+Ctrl+5 exec i3mm.placetoWspace 5
+bindsym $mod+Ctrl+6 exec i3mm.placetoWspace 6
+bindsym $mod+Ctrl+7 exec i3mm.placetoWspace 7
+bindsym $mod+Ctrl+8 exec i3mm.placetoWspace 8
+bindsym $mod+Ctrl+9 exec i3mm.placetoWspace 9
+
+bindsym $alt+1 exec i3mm.gotoMon 1
+bindsym $alt+2 exec i3mm.gotoMon 2
+bindsym $alt+3 exec i3mm.gotoMon 3
+
+bindsym $alt+Shift+1 exec i3mm.movetoMon 1
+bindsym $alt+Shift+2 exec i3mm.movetoMon 2
+bindsym $alt+Shift+3 exec i3mm.movetoMon 3
+
+bindsym $alt+Ctrl+1 exec i3mm.placetoMon 1
+bindsym $alt+Ctrl+2 exec i3mm.placetoMon 2
+bindsym $alt+Ctrl+3 exec i3mm.placetoMon 3
+
+bar {
+    strip_workspace_numbers yes
+}

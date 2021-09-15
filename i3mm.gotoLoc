@@ -1,0 +1,10 @@
+#! /bin/bash
+. "$XDG_RUNTIME_DIR"/i3mm/data
+
+if [ "$#" -lt "2" ]; then
+    i3mm.gotoLoc 1 1
+    exit;
+fi
+
+i3mm.gotoMon "$1"
+i3mm.gotoWspace "$2"
